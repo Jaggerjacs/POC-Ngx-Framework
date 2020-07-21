@@ -1,0 +1,22 @@
+<div class="table-container">
+    <div>
+        <button (click)="clickMe()">{{myButtonLabel}}</button>
+    </div>
+    <div>
+        <button (click)="inspect()">Inspect</button>
+    </div>
+    <div>
+        <input type="text" [placeholder]="myCustomPlaceholder">
+    </div>
+    <div *ngIf="myRows">
+        <div *ngFor="let row of myRows">
+            {{row.name}}
+            {{row.age}}
+            <hr>
+            <br>
+        </div>
+    </div>
+    <div>
+        <app-row></app-row>
+    </div>
+</div>
